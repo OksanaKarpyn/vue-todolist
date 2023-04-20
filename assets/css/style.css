@@ -1,0 +1,6 @@
+input:checked + label{
+    text-decoration: line-through;
+}
+body{
+    background-color: rgb(189, 45, 45);
+}

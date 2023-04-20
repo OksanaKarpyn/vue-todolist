@@ -17,16 +17,20 @@
 <body>
     <div id="app">
         <div class="wrapper">
-            <div class="container">
-                <header>
-                    <h1>Lista dei compiti da fare</h1>
-                </header>
+            <div class="container ">
                 <main>
+                    <h2>Aggiungere nuovo compito</h2>
+                    <div class="d-flex flex-column align-items-end">
+                        <label for="task"></label>
+                        <input type="text"id="task" placeholder="aggiungi nuovo task" class="form-control" v-model="valueInput">
+                        <button class="btn btn-outline-info w-25 m-2" @click="newtodo">Aggiungi</button>
+                    </div>
+                    <h3>Lista dei compiti da fare</h3>
                  <ul>
-                    <li v-for="(element,index) in todos":key="index" class="d-flex justify-content-between p-2 border-bottom">
-                        <div class="text">
-                            <input type="checkbox" name="" id="check" class="mx-2">
-                            <h4 class="d-inline-block " id="check">{{element.text}}</h4>
+                    <li v-for="(element,index) in todos":key="index" class="d-flex     justify-content-between p-2 m-2 border-bottom border-0 form-control form-group">
+                        <div class="text ">
+                            <input type="checkbox" name="" id="check1" class="mx-2" >
+                            <label class="d-inline-block " id="check1" :class="control">{{element.text}}</label>
                         </div>
                         <div class="icon"><i class="fa-solid fa-xmark"></i></div>
                     </li>

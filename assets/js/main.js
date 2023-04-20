@@ -4,7 +4,10 @@ const { createApp } = Vue
     data() {
       return {
         currentActive: 0,
-
+        control:false,
+        classCss:'input:checked + label',
+        class:'bg-info',
+        valueInput:'',
         todos: [
           {
             text: 'Fare i compiti',
@@ -22,7 +25,13 @@ const { createApp } = Vue
      
       }
     },
-    methods:{
-
+    methods: {
+      
+      newtodo() {
+        this.todos.push(this.valueInput),
+        this.valueInput=''
+      }
+      
     }
+    
   }).mount('#app')
