@@ -42,7 +42,8 @@ createApp({
       this.todos.splice(i, 1);
     },
     toggle(element){ 
-      element.done = !element.done
+    let nextValue =!element.done 
+      element.done = nextValue
 
     }
   }

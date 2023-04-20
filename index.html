@@ -34,9 +34,8 @@
                             class="d-flex justify-content-between p-2 m-2 border-bottom border-0 form-control form-group"
                             @click="toggle(element)" >
                             <div class="">
-                                <input type="checkbox" name="" id="check1" class="mx-2">
+                                <input type="checkbox" :checked="element.done" name="" id="check1" class="mx-2">
                                 <label class="d-inline-block" id="check1"
-                                    :class="{label:element.done}"
                                     >{{element.text}}</label>
                             </div>
                             <i class="fa-solid fa-xmark" @click="deleteItem(index)"></i>
