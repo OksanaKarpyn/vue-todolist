@@ -5,8 +5,6 @@ const {
 createApp({
   data() {
     return {
-      control: false,
-      currentActive: 0,
       classi: 'bg-info',
       divi:' text-decoration-line-through',
       valueInput: '',

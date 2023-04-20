@@ -25,7 +25,7 @@
                     <div class="d-flex flex-column align-items-end">
                         <label for="task"></label>
                         <input type="text" id="task" placeholder="aggiungi nuovo task" class="form-control"
-                            v-model="valueInput">
+                            v-model="valueInput"@keydown.enter="newtodo">
                         <button class="btn btn-outline-info w-25 m-2" @click="newtodo">Aggiungi</button>
                     </div>
                     <h3>Lista dei compiti da fare</h3>
