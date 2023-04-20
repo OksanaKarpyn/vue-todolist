@@ -21,8 +21,7 @@ createApp({
           text: 'Fare il bucato',
           done: false
         }
-      ]
-
+      ],
     }
   },
   methods: {
@@ -47,7 +46,7 @@ createApp({
 
     deleteItem(i) {
       console.log("delete",i);
-      // i sta per posixione del elemento, 1 quantita di elementi da eliminare
+      // i sta per posizione del elemento, 1 quantita di elementi da eliminare
       this.todos.splice(i, 1);
     },
 

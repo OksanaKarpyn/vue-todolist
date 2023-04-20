@@ -1,7 +1,7 @@
 input:checked + label{
     text-decoration: line-through;
 }
-/* label{
+ .label{
     text-decoration: line-through;
 
-} */
+} 

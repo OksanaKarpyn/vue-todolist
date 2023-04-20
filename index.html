@@ -33,8 +33,9 @@
                         <li v-for="(element,index) in todos" :key="index"
                             class="d-flex     justify-content-between p-2 m-2 border-bottom border-0 form-control form-group">
                             <div class="text ">
-                                <input type="checkbox" name="" id="check1" class="mx-2" v-if="todoTrue">
-                                <label class="d-inline-block " id="check1">{{element.text}}</label>
+                                <!-- <input type="checkbox" name="" id="check1" class="mx-2"> -->
+                                <label class="d-inline-block " id="check1"
+                                    :class="(element.done==true)?' label': '' ">{{element.text}}</label>
                             </div>
                             <i class="fa-solid fa-xmark" @click="deleteItem(index)"></i>
                         </li>
