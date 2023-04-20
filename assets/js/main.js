@@ -7,7 +7,8 @@ createApp({
     return {
       control: false,
       currentActive: 0,
-      class: 'bg-info',
+      classi: 'bg-info',
+      divi:' text-decoration-line-through',
       valueInput: '',
       todos: [{
           text: 'Fare i compiti',
@@ -35,21 +36,15 @@ createApp({
           this.valueInput = ''
       }
     },
-    todoTrue() {
-      if (this.todos == true) {
-        this.todos = this.class
-        // this.control = false
-      } else {
-        // this.control = true
-      }
-    },
-
     deleteItem(i) {
       console.log("delete",i);
       // i sta per posizione del elemento, 1 quantita di elementi da eliminare
       this.todos.splice(i, 1);
     },
+    toggle(element){ 
+      element.done = !element.done
 
+    }
   }
 
 }).mount('#app')
